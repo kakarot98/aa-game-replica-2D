@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public PinSpawnScript spawner;
     private bool hasGameEnded = false;
     public static GameManager instance;
+    public Animator animator;
 
     private void Start()
     {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
 
         
         Debug.Log("Game has ended");
+        animator.SetTrigger("EndGame");
         rotator.enabled = false;
         spawner.enabled = false;
         hasGameEnded = true;
