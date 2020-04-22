@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Pinscript : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Pinscript : MonoBehaviour
         {
             transform.SetParent(collision.transform);
             isPinned = true;
+            ScoreChange.pinCount++;
         }
         else if (collision.tag == "Pin") {
 
